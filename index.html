@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anushka Jaiswal</title>
     
-    <!-- Google Fonts for Ayush's Signature Ultra-Clean Look -->
+    <!-- Premium Designer Font Family -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --bg-color: #000000; /* Deep absolute pitch black */
-            --text-main: #ffffff; /* Stark bright white */
-            --text-muted: #7d7d82; /* Premium Apple-style gray */
-            --accent-blue: #00ffff; /* Modern Cyan */
-            --nav-bg: rgba(0, 0, 0, 0.61);
+            --background: #000000; /* Pure pitch black background */
+            --text-primary: #ffffff; /* Crisp white */
+            --text-secondary: #7f7f7f; /* Premium muted gray */
+            --border-color: #161616; /* Subdued structural divider line color */
+            --accent-blue: #295D8A; /* Your requested Slate Blue color */
         }
 
         * {
@@ -27,55 +27,77 @@
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
+            background-color: var(--background);
+            color: var(--text-primary);
             font-family: 'Plus Jakarta Sans', sans-serif;
-            letter-spacing: -0.02em;
+            letter-spacing: -0.04em;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Premium Minimalist Navbar */
+        /* Architectural structural vertical lines background layer */
+        .bg-lines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .line {
+            width: 1px;
+            background-color: var(--border-color);
+            height: 100%;
+        }
+
+        /* Minimal Fixed Navigation */
         nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 2rem 10%;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            background: var(--nav-bg);
+            padding: 2.5rem 10%;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.7);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            z-index: 100;
+            border-bottom: 1px solid var(--border-color);
         }
 
         .logo {
             font-weight: 600;
             font-size: 1.1rem;
-            letter-spacing: -0.03em;
             text-transform: lowercase;
-            color: var(--text-main);
         }
 
         .nav-links a {
-            color: var(--text-muted);
+            color: var(--text-secondary);
             text-decoration: none;
-            margin-left: 2.5rem;
+            margin-left: 3rem;
             font-size: 0.9rem;
-            font-weight: 500;
-            transition: color 0.4s ease;
+            font-weight: 400;
+            transition: color 0.3s;
         }
 
         .nav-links a:hover {
-            color: var(--text-main);
+            color: var(--text-primary);
         }
 
-        /* Ayush's Dynamic Fade-In Container Setup */
-        .container {
-            max-width: 1100px;
+        /* Structural Page Layout Content Wrapper */
+        .wrapper {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 10%;
         }
 
         section {
@@ -83,231 +105,218 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 8rem 0;
-            opacity: 0; /* Starts hidden for the animation effect */
-            transform: translateY(40px);
-            transition: opacity 1.2s cubic-bezier(0.215, 0.610, 0.355, 1), transform 1.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+            padding: 10rem 0 6rem 0;
+            border-bottom: 1px solid var(--border-color);
         }
 
-        /* Trigger class when scrolled into view */
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .section-number {
-            font-size: 0.85rem;
-            font-weight: 600;
+        .meta-tag {
+            font-size: 0.8rem;
             color: var(--accent-blue);
-            margin-bottom: 2rem;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.15em;
+            margin-bottom: 2rem;
+            font-weight: 600;
         }
 
-        /* Big Typography Hero Style */
-        #hero h1 {
-            font-size: clamp(3rem, 7vw, 5.5rem);
+        /* Massive Typography Styling */
+        h1 {
+            font-size: clamp(3.2rem, 7.5vw, 6rem);
             font-weight: 700;
             line-height: 1.05;
-            letter-spacing: -0.04em;
-            margin-bottom: 3rem;
-            max-width: 950px;
+            letter-spacing: -0.05em;
+            margin-bottom: 2rem;
         }
 
-        #hero h1 span {
-            color: var(--text-muted);
+        h1 span {
+            color: var(--text-secondary);
         }
 
-        /* Content Paragraphs */
-        .content-text {
-            font-size: clamp(1.4rem, 3vw, 2.2rem);
+        .large-paragraph {
+            font-size: clamp(1.4rem, 3.2vw, 2.3rem);
+            line-height: 1.35;
+            color: var(--text-secondary);
             font-weight: 400;
-            line-height: 1.4;
-            color: var(--text-muted);
             max-width: 900px;
         }
 
-        .content-text strong {
-            color: var(--text-main);
+        .large-paragraph strong {
+            color: var(--text-primary);
             font-weight: 500;
         }
 
-        /* Capabilities List (Replacing boxy cards with Clean Text Rows) */
-        .row-list {
+        /* Seamless List Grid Rows (No boxy borders) */
+        .stack-list {
             margin-top: 4rem;
-            border-top: 1px solid #1c1c1e;
         }
 
-        .row-item {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            padding: 2.5rem 0;
-            border-bottom: 1px solid #1c1c1e;
-            transition: padding-left 0.3s ease;
+        .stack-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 3.5rem 0;
+            border-top: 1px solid var(--border-color);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .row-item:hover {
-            padding-left: 1rem;
+        .stack-row:hover {
+            transform: translateX(12px);
         }
 
-        .row-title {
-            font-size: 1.5rem;
+        .row-left {
+            font-size: 1.8rem;
             font-weight: 600;
-            letter-spacing: -0.02em;
+            letter-spacing: -0.03em;
+            width: 35%;
         }
 
-        .row-desc {
+        .row-right {
             font-size: 1.2rem;
-            color: var(--text-muted);
+            color: var(--text-secondary);
+            width: 60%;
             line-height: 1.5;
         }
 
-        /* Creative Work/Photography Showcase Section */
-        .showcase-grid {
+        /* Grid Block Showcase Layout */
+        .gallery-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
+            gap: 2rem;
             margin-top: 3rem;
         }
 
-        .showcase-item {
-            background: #0a0a0c;
-            border: 1px solid #111;
-            padding: 3rem 2rem;
-            border-radius: 4px;
+        .gallery-card {
+            border: 1px solid var(--border-color);
+            padding: 4.5rem 2.5rem;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            min-height: 250px;
+            min-height: 280px;
+            background: #030303;
+            border-radius: 2px;
         }
 
-        .showcase-tag {
-            font-size: 0.8rem;
+        .card-label {
+            font-size: 0.75rem;
             text-transform: uppercase;
-            color: var(--accent-blue);
-            font-weight: 600;
+            color: var(--text-secondary);
             letter-spacing: 0.1em;
         }
 
-        .showcase-title {
-            font-size: 1.8rem;
+        .card-head {
+            font-size: 1.9rem;
             font-weight: 500;
-            margin-top: 2rem;
             letter-spacing: -0.03em;
         }
 
-        /* Large Interactive Contact Buttons */
-        .giant-links {
+        /* Huge Action-Triggered Links Area */
+        .footer-links {
             display: flex;
             flex-direction: column;
-            margin-top: 2rem;
+            margin-top: 3rem;
         }
 
-        .giant-btn {
-            font-size: clamp(2rem, 5vw, 4rem);
+        .huge-link {
+            font-size: clamp(2.2rem, 5.5vw, 4.2rem);
             font-weight: 600;
-            color: var(--text-muted);
+            color: var(--text-secondary);
             text-decoration: none;
-            padding: 1.5rem 0;
-            border-bottom: 1px solid #1c1c1e;
+            padding: 2.2rem 0;
+            border-bottom: 1px solid var(--border-color);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: color 0.3s ease;
+            transition: color 0.3s;
         }
 
-        .giant-btn:hover {
-            color: var(--text-main);
+        .huge-link:hover {
+            color: var(--text-primary);
         }
 
-        .giant-btn span {
-            font-size: 1.5rem;
+        .huge-link span {
+            font-size: 2rem;
             transition: transform 0.3s ease;
         }
 
-        .giant-btn:hover span {
-            transform: translateX(15px);
+        .huge-link:hover span {
+            transform: translateX(20px);
         }
 
         footer {
-            padding: 6rem 0 3rem 0;
-            color: var(--text-muted);
-            font-size: 0.85rem;
+            padding: 6rem 0 4rem 0;
             display: flex;
             justify-content: space-between;
-            border-top: 1px solid #1c1c1e;
-            margin-top: 8rem;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
         }
 
-        /* Responsive Styles */
         @media (max-width: 768px) {
             nav { padding: 1.5rem 5%; }
-            .row-item { grid-template-columns: 1fr; gap: 0.5rem; }
-            .showcase-grid { grid-template-columns: 1fr; }
+            .wrapper { padding: 0 5%; }
+            .bg-lines { padding: 0 5%; }
+            .stack-row { flex-direction: column; gap: 1rem; padding: 2rem 0; }
+            .row-left, .row-right { width: 100%; }
+            .gallery-grid { grid-template-columns: 1fr; }
             footer { flex-direction: column; gap: 1rem; text-align: center; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Nav -->
+    <!-- Architectural Background Structural Lines Layer -->
+    <div class="bg-lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <!-- Top Navigation Bar -->
     <nav>
         <div class="logo">anushka.</div>
         <div class="nav-links">
             <a href="#about">about</a>
-            <a href="#work">focus</a>
+            <a href="#focus">focus</a>
             <a href="#creative">creative</a>
             <a href="#contact">contact</a>
         </div>
     </nav>
 
-    <div class="container">
+    <!-- Site Master Wrapper -->
+    <div class="wrapper">
 
-        <!-- Hero Section -->
-        <section id="hero" class="visible">
-            <div class="section-number">00 — Hello</div>
+        <!-- Welcome View Intro -->
+        <section id="hero">
+            <div class="meta-tag">00 // introduction</div>
             <h1>Anushka Jaiswal. <br><span>Shaping code, physics, and visual narratives from India.</span></h1>
         </section>
 
-        <!-- About Section -->
+        <!-- Profile/Context View Layer -->
         <section id="about">
-            <div class="section-number">01 — Profile</div>
-            <div class="content-text">
-                I am a student from Uttar Pradesh, India, currently deep in the world of <strong>Physics, Chemistry, and Mathematics (PCM)</strong>. My ultimate technical milestone is mastering the depth of the <strong>JEE Main & Advanced examinations in 2028</strong>.
+            <div class="meta-tag">01 // profile</div>
+            <div class="large-paragraph">
+                I am a student based in Uttar Pradesh, India, fully immersed in <strong>Physics, Chemistry, and Mathematics (PCM)</strong>. My ultimate technical targets are the rigorous <strong>JEE Main & Advanced examinations in 2028</strong>.
                 <br><br>
-                Outside academic logic, I practice engineering through <strong>C++ development</strong>, translating complex algorithms into elegant syntax.
+                Parallel to academic prep, I build logical computer science foundations through <strong>C++ code execution</strong>, structuring efficient algorithms.
             </div>
         </section>
 
-        <!-- Focus Section -->
-        <section id="work">
-            <div class="section-number">02 — Engineering Focus</div>
-            <div class="content-text">How I approach logic, mathematics, and building digital foundations.</div>
+        <!-- Engineering / Core Core Capabilities Row Split -->
+        <section id="focus">
+            <div class="meta-tag">02 // engineering focus</div>
+            <div class="large-paragraph">Deconstructing analytical systems and system mechanics frameworks.</div>
             
-            <div class="row-list">
-                <div class="row-item">
-                    <div class="row-title">JEE Advanced Prep</div>
-                    <div class="row-desc">Deconstructing physical systems, solving analytical mechanics problems, and exploring rigorous mathematical proofs daily.</div>
+            <div class="stack-list">
+                <div class="stack-row">
+                    <div class="row-left">JEE Advanced</div>
+                    <div class="row-right">Breaking down rotational kinematics equations, exploring advanced system variables, and parsing deep mathematical proof structures daily.</div>
                 </div>
-                <div class="row-item">
-                    <div class="row-title">C++ Logic</div>
-                    <div class="row-desc">Writing highly performant algorithms, exploring memory management foundations, and building structures with clean, compiled syntax.</div>
+                <div class="stack-row">
+                    <div class="row-left">C++ Logic</div>
+                    <div class="row-right">Developing foundational compiled logic structures, testing space-time algorithmic execution parameters, and managing pointers.</div>
                 </div>
             </div>
         </section>
 
-        <!-- Creative Section -->
+        <!-- Creative Grid Modules -->
         <section id="creative">
-            <div class="section-number">03 — Creative Outlets</div>
-            <div class="content-text">Capturing the world through dynamic lenses and advanced generative tools.</div>
-            
-            <div class="showcase-grid">
-                <div class="showcase-item">
-                    <div class="showcase-tag">Visuals</div>
-                    <div class="showcase-title">Cinematography & Video Editing</div>
-                </div>
-                <div class="showcase-item">
-                    <div class="showcase-tag">Stills</div>
-                    <div class="showcase-title">Nature Photography</div>
-                </div>
-                
+            <div class="meta-tag">03 // creative engine</div>
+            Thank you 
