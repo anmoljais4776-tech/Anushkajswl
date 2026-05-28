@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anushka Jaiswal | Portfolio</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #090e14; /* Darker navy tint for the background */
+            --text-color: #f5f5f7;
+            --accent-color: #295D8A; /* Your exact Slate Blue */
+            --accent-glow: #3d7fb8; /* Lighter blue for link hover highlights */
+            --muted-color: #8fa0b0; /* Soft slate grey for descriptions */
+            --card-bg: #121a24; /* Deep blue-grey tint for cards */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 4rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: rgba(9, 14, 20, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: -1px;
+            color: var(--text-color);
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-glow);
+        }
+
+        section {
+            padding: 8rem 4rem 4rem 4rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .section-tag {
+            color: var(--accent-glow);
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        #hero {
+            max-width: 900px;
+        }
+
+        #hero h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        #hero p {
+            font-size: 1.4rem;
+            color: var(--muted-color);
+            margin-bottom: 2.5rem;
+        }
+
+        .about-content {
+            max-width: 800px;
+            font-size: 1.2rem;
+            color: #d2d2d7;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid #1c293a;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-glow);
+            box-shadow: 0 10px 30px rgba(41, 93, 138, 0.15);
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .card p {
+            color: var(--muted-color);
+            font-size: 0.95rem;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .contact-btn {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1.8rem;
+            font-family: 'Space Grotesk', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #1c293a;
+            padding-bottom: 1rem;
+            transition: border-color 0.3s, color 0.3s;
+            max-width: 500px;
+        }
+
+        .contact-btn:hover {
+            border-color: var(--accent-glow);
+            color: var(--accent-glow);
+        }
+
+        footer {
+            padding: 4rem;
+            border-top: 1px solid #121a24;
+            text-align: center;
+            color: var(--muted-color);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            nav { padding: 1.5rem 2rem; }
+            section { padding: 6rem 2rem 2rem 2rem; }
+            #hero h1 { font-size: 3rem; }
+            #hero p { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">ANUSHKA.</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#what-i-do">What I Do</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <p style="color: var(--accent-glow); font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">PCM Student & Creator</p>
+        <h1>Anushka Jaiswal</h1>
+        <p>Based in Uttar Pradesh, India. Merging core logical reasoning with cinematography, video editing, C++, and AI music generation.</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-tag">01 — Background</div>
+        <h2>The Journey</h2>
+        <div class="about-content">
+            <p>I completed my 10th grade in 2026 and am currently immersed in PCM (Physics, Chemistry, Mathematics). My primary academic focus is cracking the JEE Main & Advanced examinations in 2028.</p>
+            <p>While coding in C++ feeds my technical problem-solving side, I am equally driven by visual storytelling. I actively capture the world through nature photography, shape narratives via cinematography and video editing, and experiment with prompt variables to generate AI music.</p>
+        </div>
+    </section>
+
+    <!-- What I Do Section -->
+    <section id="what-i-do">
+        <div class="section-tag">02 — Capabilities</div>
+        <h2>What I Do</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>JEE Prep & C++</h3>
+                <p>Building strong foundational mechanics in physics and math while using C++ to practice algorithmic logic.</p>
+            </div>
+            <div class="card">
+                <h3>Video Production</h3>
+                <p>Handling cinematography workflows and precise video editing to produce high-impact visual stories.</p>
+            </div>
+            <div class="card">
+                <h3>Nature Photography</h3>
+                <p>Documenting natural lighting, landscapes, and micro-perspectives using strategic composition.</p>
+            </div>
+            <div class="card">
+                <h3>AI Generative Arts</h3>
+                <p>Experimenting with prompt variables to design, structure, and generate high-fidelity AI music and audio.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-tag">03 — Connect</div>
+        <h2>Reach Out</h2>
+        <p style="color: var(--muted-color); margin-bottom: 2rem;">Always open to talking tech, video editing tips, or sharing notes on physics problems.</p>
+        
+        <div class="contact-links">
+            <a href="https://github.com" target="_blank" class="contact-btn">GitHub <span>→</span></a>
+            <a href="mailto:your.email@example.com" class="contact-btn">Email <span>→</span></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 · Anushka Jaiswal · Built with Git & Passion</p>
+    </footer>
+
+</body>
+  </html>  
